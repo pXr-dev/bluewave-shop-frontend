@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produktdetails - Bluewave Electronics</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm py-6 px-8 mb-10">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold tracking-tight text-blue-600">Bluewave Electronics</h1>
+            <nav class="space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-blue-600 transition">Shop</a>
+                <a href="admin.html" class="text-gray-600 hover:text-blue-600 transition">Produktverwaltung</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content: Produktdetails -->
+    <main class="max-w-4xl mx-auto px-8 flex-grow w-full mb-16">
+        <div class="mb-6">
+            <a href="index.html" class="text-sm text-blue-600 hover:underline">&larr; Zurück zur Übersicht</a>
+        </div>
+
+        <div id="product-detail-container" class="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm">
+            <!-- Wird dynamisch per JavaScript befüllt -->
+            <p class="text-gray-500 text-center py-10">Lade Produktdetails...</p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6 text-center text-sm text-gray-500">
+        &copy; 2026 Bluewave Electronics. Alle Rechte vorbehalten.
+    </footer>
+
+    <!-- JavaScript Einbindung -->
+    <script src="js/api.js"></script>
+    <script src="js/detail.js"></script>
+</body>
+</html>
