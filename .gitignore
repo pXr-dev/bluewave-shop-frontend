@@ -1,0 +1,12 @@
+# OS-spezifische Dateien
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs und Editor-Dateien
+.vscode/
+.idea/
+
+# Lokale Logs oder Caches
+*.log
+node_modules/
