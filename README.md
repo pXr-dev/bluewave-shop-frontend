@@ -1,14 +1,42 @@
-# Bluewave Electronics - E-Commerce Frontend Prototyp
+# Bluewave Electronics - Frontend Prototyp
 
-Frontend-Prototyp für den E-Commerce-Shop der Firma Bluewave Electronics[cite: 1]. Entwickelt zur Anbindung an die bestehende Django REST Framework API[cite: 4].
+Ein sauberer, modularer und responsiver Frontend-Prototyp für **Bluewave Electronics**, entwickelt mit HTML5, Tailwind CSS und Vanilla JavaScript. Das Projekt kommuniziert mit einem Django REST Framework Backend und bietet ein robustes Fallback-System für den Offline-/Prototypen-Modus.
 
-## Tech Stack
-* HTML5 / CSS3
-* JavaScript (Vanilla / ES6+) mit Modulen und Fetch-API
-* Optional: CSS-Framework (z. B. Tailwind oder Bootstrap)
+---
 
-## Projektstruktur
-* `index.html` - Hauptseite mit Produktübersicht (Cards)[cite: 2]
-* `detail.html` - Produktdetailseite (Preis, Beschreibung, Lagerbestand)[cite: 2]
-* `admin.html` - Verwaltungsseite (Produkte anlegen, bearbeiten, löschen)[cite: 2]
-* `js/api.js` - Zentraler API-Client mit zentralem Error-Handling und JS Docs
+## 🚀 Features & Meilensteine
+
+- **Meilenstein 1: Architektur & API-Client**
+  - Zentraler API-Client (`js/api.js`) für REST-Anfragen.
+  - Automatisches Fallback-System: Versucht, Daten mit einem echten Backend zu synchronisieren, wechselt bei Nichterreichbarkeit aber nahtlos auf persistente Mockdaten (`localStorage`).
+- **Meilenstein 2: Hauptseite & Produktübersicht (`index.html`)**
+  - Modernes, minimalistisches Design mit viel Whitespace (Tailwind CSS).
+  - Dynamisches Rendern der Produktkarten basierend auf den Backend-Spezifikationen (LED Displays & Drucktaster in verschiedenen Farben).
+- **Meilenstein 3: Produktdetailseite (`detail.html`)**
+  - Dynamisches Auslesen der Produkt-ID über URL-Parameter (`?id=...`).
+  - Detaillierte Ansicht von Preis, Beschreibung und aktuellem Lagerbestand.
+- **Meilenstein 4: Admin-Verwaltungsseite (`admin.html`)**
+  - CRUD-Funktionen: Hinzufügen neuer Produkte (POST-Simulation) und Löschen von Datensätzen.
+  - Vollständige JS Docs Dokumentation und XSS-Schutz.
+
+---
+
+## 📂 Projektstruktur
+
+```text
+bluewave-shop-frontend/
+│
+├── index.html        # Startseite & Produktübersicht
+├── detail.html       # Produktdetailseite
+├── admin.html        # Admin-Verwaltungsseite (CRUD)
+│
+├── css/
+│   └── style.css     # Optionale eigene Stile (ergänzend zu Tailwind)
+│
+├── js/
+│   ├── api.js        # Zentraler API-Client & Mockdaten-Logik
+│   ├── main.js       # Logik für die Startseite
+│   ├── detail.js     # Logik für die Detailseite
+│   └── admin.js      # Logik für die Admin-Verwaltung
+│
+└── README.md         # Projektdokumentation
